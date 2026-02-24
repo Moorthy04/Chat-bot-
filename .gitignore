@@ -1,0 +1,107 @@
+# Python
+# Shared ignores (also present in frontend/.gitignore)
+# - node_modules/
+# - dist/
+# - .env
+# - .env.*
+# - .DS_Store
+# - .vscode/
+# - .idea/
+# - *.log
+# - __pycache__/
+# - *.pyc
+# - venv/
+
+ # Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.egg-info/
+pip-wheel-metadata/
+build/
+dist/
+.eggs/
+
+# Django / Database
+/backend/db.sqlite3
+db.sqlite3
+*.sqlite3
+
+# Media uploads
+/backend/media/
+/media/
+media/
+
+# Virtual environments and env files
+.env
+.env.*
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+npm-debug.log*
+yarn-error.log*
+yarn.lock
+package-lock.json
+dist/
+frontend/dist/
+.vite/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# macOS
+.DS_Store
+
+# Testing / coverage
+.coverage
+coverage.xml
+.pytest_cache/
+nosetests.xml
+htmlcov/
+
+# Type checkers / caches
+.mypy_cache/
+.pytype/
+
+# Logs
+*.log
+
+# Swap / temp
+*.swp
+*.swo
+*.tmp
+
+# Migrations cache
+*/migrations/__pycache__/
+*/migrations/*.pyc
+
+# frontend build artifacts
+frontend/dist/
+frontend/build/
+frontend/.cache/
+frontend/.vite/
+frontend/node_modules/
+frontend/.env
+frontend/.env.*
+frontend/.DS_Store
+frontend/.vscode/
+frontend/.idea/
+frontend/*.log
+frontend/*.swp
+frontend/*.swo
+frontend/*.tmp
+frontend/.mypy_cache/
+frontend/.pytype/
+frontend/.pytest_cache/
+
