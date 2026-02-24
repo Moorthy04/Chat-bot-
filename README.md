@@ -11,7 +11,7 @@ Minimal full-stack chatbot project (Django backend + Vite + React frontend).
 ## Quick start
 
 Prerequisites:
-# Chatbot — Detailed README
+# Chatbot
 
 This repository contains a full-stack chatbot application with a Django REST API backend and a Vite + React frontend. It is a developer-focused starter that demonstrates how to connect a conversational UI to multiple AI providers (OpenAI, Gemini, Claude).
 
