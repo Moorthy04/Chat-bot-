@@ -65,7 +65,7 @@ const MessageList = ({ messages, isSidebarOpen = true, isResponding, isMobile })
 
     return (
         <div className={cn(
-            "flex flex-col gap-8 py-8 mx-auto px-4 transition-all duration-300",
+            "flex flex-col gap-4 sm:gap-8 py-4 sm:py-8 mx-auto px-2 sm:px-4 transition-all duration-300",
             isSidebarOpen && !isMobile ? "max-w-3xl" : "max-w-5xl"
         )}>
             {messages.map((msg, idx) => {
@@ -83,13 +83,13 @@ const MessageList = ({ messages, isSidebarOpen = true, isResponding, isMobile })
                         transition={{ duration: 0.3, ease: 'easeOut' }}
                         key={msg.id}
                         className={cn(
-                            "flex gap-4 group",
+                            "flex gap-2 sm:gap-4 group",
                             msg.role === 'user' ? 'justify-end' : 'justify-start'
                         )}
                     >
                         <div className={cn(
-                            "flex flex-col gap-1 min-w-0",
-                            msg.role === 'user' ? 'items-end max-w-[85%] md:max-w-[75%]' : 'items-start max-w-[90%] md:max-w-[85%]'
+                            "flex flex-col gap-0.5 sm:gap-1 min-w-0",
+                            msg.role === 'user' ? 'items-end max-w-[92%] sm:max-w-[85%] md:max-w-[75%]' : 'items-start max-w-[95%] sm:max-w-[90%] md:max-w-[85%]'
                         )}>
                             {/* Attachments above message */}
                             {msg.attachments && msg.attachments.length > 0 && (
@@ -103,7 +103,7 @@ const MessageList = ({ messages, isSidebarOpen = true, isResponding, isMobile })
                             {/* Message bubble */}
                             {msg.content && (
                                 <div className={cn(
-                                    "px-4 py-2.5 rounded-[20px] text-[15px] leading-relaxed transition-all",
+                                    "px-3 py-2 sm:px-4 sm:py-2.5 rounded-[20px] text-sm sm:text-[15px] leading-normal sm:leading-relaxed transition-all",
                                     msg.role === 'user'
                                         ? 'bg-(--user-msg-bg) text-(--user-msg-text) rounded-tr-md shadow-md shadow-(--user-msg-bg)/10 font-normal'
                                         : 'bg-transparent text-foreground/90'
@@ -124,7 +124,7 @@ const MessageList = ({ messages, isSidebarOpen = true, isResponding, isMobile })
                             {!isStreaming && msg.content && (
                                 <div className={cn(
                                     "flex mt-0.5",
-                                    msg.role === 'user' ? 'justify-end pr-2' : 'justify-start pl-1'
+                                    msg.role === 'user' ? 'justify-end pr-2' : 'sm:ml-2 ml-4 pl-1'
                                 )}>
                                     <CopyButton text={msg.content} />
                                 </div>

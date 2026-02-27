@@ -168,7 +168,7 @@ const ChatInterface = ({ isSidebarOpen = true, setIsSidebarOpen, isMobile }) => 
                             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">How can I help you today?</h2>
                         </div>
                     ) : (
-                        <div className="pt-4 max-w-4xl mx-auto w-full">
+                        <div className="pt-2 sm:pt-4 max-w-4xl mx-auto w-full">
                             <MessageList
                                 messages={messages}
                                 isSidebarOpen={isSidebarOpen}
@@ -187,7 +187,7 @@ const ChatInterface = ({ isSidebarOpen = true, setIsSidebarOpen, isMobile }) => 
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.8, y: 10 }}
                             onClick={() => scrollToBottom()}
-                            className="absolute bottom-4 left-1/2 -translate-x-1/2 p-1 rounded-full bg-(--background) border border-(--border) shadow-lg hover:bg-(--hover-bg) transition-colors z-1 text-foreground/60 hover:text-foreground cursor-pointer"                            aria-label="Scroll to bottom"
+                            className="absolute bottom-4 left-1/2 -translate-x-1/2 p-1 rounded-full bg-(--background) border border-(--border) shadow-lg hover:bg-(--hover-bg) transition-colors z-1 text-foreground/60 hover:text-foreground cursor-pointer" aria-label="Scroll to bottom"
                         >
                             <ArrowDown size={20} />
                         </motion.button>

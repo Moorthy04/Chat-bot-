@@ -26,6 +26,29 @@ export const ChatProvider = ({ children }) => {
   const [showExhaustionBanner, setShowExhaustionBanner] = useState(false);
 
   // ----------------------------
+  // Dynamic Browser Tab Title
+  // ----------------------------
+  useEffect(() => {
+    const baseTitle = "Chat Bot 2.0";
+    let title = baseTitle;
+
+    if (location.pathname === "/profile") {
+      title = `Profile — ${baseTitle}`;
+    } else if (location.pathname === "/login") {
+      title = `Login — ${baseTitle}`;
+    } else if (location.pathname === "/signup") {
+      title = `Sign Up — ${baseTitle}`;
+    } else if (location.pathname.startsWith("/chat/")) {
+      const activeChat = chats.find(chat => chat.id === activeChatId);
+      if (activeChat && activeChat.title) {
+        title = `${activeChat.title}`;
+      }
+    }
+
+    document.title = title;
+  }, [location.pathname, activeChatId, chats]);
+
+  // ----------------------------
   // Fetch chat list on auth
   // ----------------------------
   useEffect(() => {

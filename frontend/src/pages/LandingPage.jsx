@@ -48,7 +48,7 @@ const LandingPage = () => {
                     <Sparkles size={16} />
                     <span>Powered by Advanced AI</span>
                 </div>
-                
+
                 <p className="text-xl text-sidebar-foreground/70 mb-12 max-w-2xl mx-auto">
                     Experience the power of conversational AI. Get instant answers, creative ideas, and intelligent assistance.
                 </p>
@@ -82,7 +82,7 @@ const LandingPage = () => {
                             Get instant responses to your questions with our optimized AI engine.
                         </p>
                     </div>
-                    
+
                     <div className="p-6 rounded-2xl border border-border hover:border-(--button-primary) transition-all">
                         <div className="w-12 h-12 rounded-xl bg-(--button-primary)/10 flex items-center justify-center mb-4">
                             <Sparkles size={24} className="text-(--button-primary)" />
@@ -92,7 +92,7 @@ const LandingPage = () => {
                             From writing to coding, get creative and intelligent assistance.
                         </p>
                     </div>
-                    
+
                     <div className="p-6 rounded-2xl border border-border hover:border-(--button-primary) transition-all">
                         <div className="w-12 h-12 rounded-xl bg-(--button-primary)/10 flex items-center justify-center mb-4">
                             <Shield size={24} className="text-(--button-primary)" />

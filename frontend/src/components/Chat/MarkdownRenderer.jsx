@@ -47,8 +47,8 @@ const CodeBlock = ({ language, value, theme }) => {
                     wrapLongLines={true}
                     customStyle={{
                         margin: 0,
-                        padding: '1.25rem',
-                        fontSize: '0.85rem',
+                        padding: window.innerWidth < 640 ? '0.75rem' : '1.25rem',
+                        fontSize: window.innerWidth < 640 ? '0.75rem' : '0.85rem',
                         lineHeight: '1.6',
                         backgroundColor: 'transparent',
                         width: '100%',
@@ -68,7 +68,7 @@ const MarkdownRenderer = ({ content, isStreaming = false }) => {
     const { theme } = useTheme();
 
     return (
-        <div className="markdown-container prose prose-zinc dark:prose-invert max-w-none prose-sm leading-[1.75] prose-headings:font-bold prose-p:my-4 prose-pre:bg-transparent prose-pre:p-0 prose-strong:text-foreground prose-headings:text-foreground prose-headings:mb-3 prose-headings:mt-6">
+        <div className="markdown-container prose prose-zinc dark:prose-invert max-w-none prose-sm sm:prose-base leading-[1.75] prose-headings:font-bold prose-p:my-4 prose-pre:bg-transparent prose-pre:p-0 prose-strong:text-foreground prose-headings:text-foreground prose-headings:mb-3 prose-headings:mt-6 prose-h1:text-xl sm:prose-h1:text-2xl prose-h2:text-lg sm:prose-h2:text-xl prose-h3:text-base sm:prose-h3:text-lg">
             <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
