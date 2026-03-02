@@ -66,7 +66,7 @@ const MessageList = ({ messages, isSidebarOpen = true, isResponding, isMobile })
     return (
         <div className={cn(
             "flex flex-col gap-4 sm:gap-8 py-4 sm:py-8 mx-auto px-2 sm:px-4 transition-all duration-300",
-            isSidebarOpen && !isMobile ? "max-w-3xl" : "max-w-5xl"
+            isSidebarOpen && !isMobile ? "max-w-4xl" : "max-w-5xl"
         )}>
             {messages.map((msg, idx) => {
                 const isLast = idx === messages.length - 1;

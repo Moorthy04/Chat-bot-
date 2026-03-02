@@ -167,7 +167,7 @@ const ChatInput = ({
         <div
             className={cn(
                 "w-full mx-auto px-4 pb-3 transition-all duration-300",
-                isSidebarOpen && !isMobile ? "max-w-3xl" : "max-w-5xl"
+                isSidebarOpen && !isMobile ? "max-w-4xl" : "max-w-5xl"
             )}
             onDragEnter={handleDragEnter}
             onDragLeave={handleDragLeave}
