@@ -69,6 +69,10 @@ class ChatStreamView(APIView):
             user=request.user
         )
 
+        # Title auto-generation should only ever run for the very first message
+        # in a conversation. Compute this BEFORE creating the user message.
+        is_first_message = not Message.objects.filter(conversation=conversation).exists()
+
         # 1️⃣ Save User Message (DB — before generator starts)
         user_message = Message.objects.create(
             conversation=conversation,
@@ -150,7 +154,7 @@ class ChatStreamView(APIView):
                 # is still the default sentinel value.
                 try:
                     DEFAULT_TITLE = 'New Chat'
-                    if assistant_content and ('[Error]' not in assistant_content):
+                    if is_first_message and assistant_content and ('[Error]' not in assistant_content):
                         new_title = ai_engine.generate_title(
                             user_message_content,
                             assistant_content,
